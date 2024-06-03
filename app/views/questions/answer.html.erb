@@ -1,6 +1,18 @@
-<h1>Coach's response</h1>
 
-<p>Your question: <%= @question %></p>
-<p>Coach's answer: <%= @answer %></p>
+<div class="container">
+  <h1 class="text-center">Stupid Coaching</h1>
 
-<%= link_to 'Ask another question', ask_path %>
+  <div class="question">
+    <p><%= @question %></p>
+    <p class="text-muted">— You</p>
+  </div>
+
+  <div class="answer">
+    <p><%= @answer %></p>
+    <p class="text-muted">— Your coach</p>
+  </div>
+
+  <div class="mt-3">
+    <%= link_to 'Ask another question', ask_path, class: 'btn btn-secondary' %>
+  </div>
+</div>
